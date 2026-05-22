@@ -55,7 +55,7 @@ if ($_POST) {
         <input type="password" name="clave" placeholder="Contraseña" required>
         <input type="password" name="confirmar_clave" placeholder="Confirmar contraseña" required>
         <button type="submit">Registrar</button>
-        <p style="margin-top:1rem; text-align:center; font-size:0.95rem; color:#6b7280;">¿Ya tienes cuenta? <a href="login.php">Iniciar sesión</a></p>
+        <p style="margin-top:1rem; text-align:center; font-size:0.95rem; color:#cbd5e1;">¿Ya tienes cuenta? <a href="login.php">Iniciar sesión</a></p>
     </form>
 </div>
 </body>

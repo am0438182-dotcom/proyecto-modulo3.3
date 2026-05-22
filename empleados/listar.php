@@ -44,10 +44,10 @@ $empleados = $conexion->query('SELECT * FROM empleados ORDER BY id_empleado')->f
     </div>
 
     <?php if ($error): ?>
-        <div class="chart-card" style="border-color:#f87171;color:#b91c1c;"><?= htmlspecialchars($error) ?></div>
+        <div class="chart-card" style="border-color:#f87171;color:#fecaca;"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
     <?php if ($message): ?>
-        <div class="chart-card" style="border-color:#34d399;color:#064e3b;"><?= htmlspecialchars($message) ?></div>
+        <div class="chart-card" style="border-color:#4ade80;color:#a7f3d0;"><?= htmlspecialchars($message) ?></div>
     <?php endif; ?>
 
     <p style="margin-bottom:1rem;">Puedes registrar cuentas nuevas en <a href="../registro.php">Registro</a>.</p>

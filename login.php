@@ -91,7 +91,7 @@ if ($_POST) {
         </div>
 
         <button type="submit">Ingresar</button>
-        <p style="margin-top:1rem; text-align:center; color:#6b7280;">¿No tienes cuenta? <a href="registro.php">Regístrate</a></p>
+        <p style="margin-top:1rem; text-align:center; color:#cbd5e1;">¿No tienes cuenta? <a href="registro.php">Regístrate</a></p>
     </form>
 </div>
 
