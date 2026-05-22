@@ -1,0 +1,12 @@
+Cuenta de administrador del sistema MarketPlace Express
+
+Usuario: Administrador
+Correo: admin@marketplace.com
+Contraseña: Admin123!
+Rol: admin
+
+Notas:
+- Esta cuenta se crea automáticamente si no existe ningún administrador en la base de datos.
+- El panel de usuarios está en: empleados/listar.php
+- Desde ahí el administrador puede otorgar permisos a otras cuentas.
+- Usa login.php para iniciar sesión y registro.php para crear nuevas cuentas de usuario.
