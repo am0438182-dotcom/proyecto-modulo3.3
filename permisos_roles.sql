@@ -16,10 +16,10 @@ CREATE USER 'contador'@'localhost' IDENTIFIED BY 'Contador2026!';
 CREATE USER 'auditor'@'localhost' IDENTIFIED BY 'Auditor2026!';
 
 -- Asegurar que no existan privilegios heredados no autorizados
-REVOKE ALL PRIVILEGES, GRANT OPTION ON *.* FROM 'gerente'@'localhost';
-REVOKE ALL PRIVILEGES, GRANT OPTION ON *.* FROM 'vendedor'@'localhost';
-REVOKE ALL PRIVILEGES, GRANT OPTION ON *.* FROM 'contador'@'localhost';
-REVOKE ALL PRIVILEGES, GRANT OPTION ON *.* FROM 'auditor'@'localhost';
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'gerente'@'localhost';
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'vendedor'@'localhost';
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'contador'@'localhost';
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'auditor'@'localhost';
 
 FLUSH PRIVILEGES;
 

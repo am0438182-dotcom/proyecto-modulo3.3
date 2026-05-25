@@ -1,3 +1,4 @@
+hola
 <?php require_once 'auth.php'; requireAuth(); ?>
 <?php
 session_start();
