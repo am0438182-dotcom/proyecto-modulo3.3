@@ -1,7 +1,8 @@
-<?php require_once '../auth.php'; requireAuth(); include '../conexion.php'; ?>
+<?php require_once '../auth.php'; requireRole(['gerente','contador']); include '../conexion.php'; ?>
 
 <?php
 $search = trim($_GET['search'] ?? '');
+
 $categoriaFiltro = $_GET['categoria'] ?? '';
 $categorias = $conexion->query("SELECT * FROM categorias ORDER BY nombre ASC");
 

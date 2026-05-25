@@ -1,7 +1,9 @@
 <?php
 require_once '../auth.php';
-requireAuth();
+requireRole(['gerente','vendedor']);
 include '../conexion.php';
+
+
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: nueva_venta.php');

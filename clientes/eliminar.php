@@ -1,7 +1,8 @@
 <?php
 require_once '../auth.php';
-requireAuth();
+requireRole(['gerente']);
 include '../conexion.php';
+
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 if ($id > 0) {

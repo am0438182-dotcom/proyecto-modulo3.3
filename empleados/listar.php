@@ -1,13 +1,16 @@
 <?php
 require_once '../auth.php';
-requireAdmin();
+requireRole(['gerente']);
 include '../conexion.php';
+
 
 $error = '';
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id_empleado'], $_POST['cargo'])) {
     $id = (int) $_POST['id_empleado'];
-    $cargo = in_array($_POST['cargo'], ['admin', 'vendedor', 'usuario']) ? $_POST['cargo'] : 'usuario';
+    $cargo = in_array($_POST['cargo'], ['gerente', 'vendedor', 'contador', 'auditor', 'admin', 'usuario'], true) ? $_POST['cargo'] : 'contador';
+    $cargo = normalizeCargo($cargo);
+
 
     $adminCount = $conexion->query("SELECT COUNT(*) FROM empleados WHERE cargo = 'admin'")->fetchColumn();
     $stmt = $conexion->prepare('SELECT cargo FROM empleados WHERE id_empleado = :id');
@@ -68,9 +71,12 @@ $empleados = $conexion->query('SELECT * FROM empleados ORDER BY id_empleado')->f
                     <form method="POST" style="display:inline-flex; gap:0.5rem; align-items:center;">
                         <input type="hidden" name="id_empleado" value="<?= htmlspecialchars($empleado['id_empleado']) ?>">
                         <select name="cargo">
-                            <option value="usuario" <?= $empleado['cargo'] === 'usuario' ? 'selected' : '' ?>>Usuario</option>
+                            <option value="contador" <?= $empleado['cargo'] === 'contador' || $empleado['cargo'] === 'usuario' ? 'selected' : '' ?>>Contador</option>
                             <option value="vendedor" <?= $empleado['cargo'] === 'vendedor' ? 'selected' : '' ?>>Vendedor</option>
-                            <option value="admin" <?= $empleado['cargo'] === 'admin' ? 'selected' : '' ?>>Admin</option>
+                            <option value="auditor" <?= $empleado['cargo'] === 'auditor' ? 'selected' : '' ?>>Auditor</option>
+                            <option value="gerente" <?= $empleado['cargo'] === 'gerente' || $empleado['cargo'] === 'admin' ? 'selected' : '' ?>>Gerente</option>
+
+
                         </select>
                         <button type="submit" class="btn">Guardar</button>
                     </form>

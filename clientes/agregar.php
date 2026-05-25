@@ -1,10 +1,14 @@
 <?php include '../conexion.php'; ?>
 
 <?php
+require_once '../auth.php';
+requireRole(['gerente']);
+
 if($_POST){
 
     $sql = "INSERT INTO clientes(nombre, apellido, email, telefono, direccion)
             VALUES(:nombre, :apellido, :email, :telefono, :direccion)";
+
 
     $stmt = $conexion->prepare($sql);
 

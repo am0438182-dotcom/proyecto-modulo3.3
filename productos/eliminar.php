@@ -1,4 +1,5 @@
-<?php include '../conexion.php'; ?>
+<?php require_once '../auth.php'; requireRole(['gerente']); include '../conexion.php'; ?>
+
 
 $id = $_GET['id'];
 

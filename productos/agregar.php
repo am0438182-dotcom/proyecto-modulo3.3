@@ -1,7 +1,10 @@
+<?php require_once '../auth.php'; requireRole(['gerente']); ?>
+
 <?php include '../conexion.php'; ?>
 
 <?php
 $categorias = $conexion->query("SELECT * FROM categorias");
+
 
 $error = '';
 $success = '';

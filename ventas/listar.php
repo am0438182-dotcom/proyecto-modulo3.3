@@ -1,4 +1,5 @@
-<?php require_once '../auth.php'; requireAuth(); include '../conexion.php'; ?>
+<?php require_once '../auth.php'; requireRole(['gerente','contador','auditor']); include '../conexion.php'; ?>
+
 
 <?php
 $ventas = $conexion->query(

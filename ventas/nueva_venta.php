@@ -1,6 +1,7 @@
-<?php require_once '../auth.php'; requireAuth(); include '../conexion.php'; ?>
+<?php require_once '../auth.php'; requireRole(['gerente','vendedor']); include '../conexion.php'; ?>
 
 <?php
+
 $clientes = $conexion->query("SELECT * FROM clientes ORDER BY nombre ASC")->fetchAll(PDO::FETCH_ASSOC);
 $productos = $conexion->query("SELECT * FROM productos ORDER BY nombre ASC")->fetchAll(PDO::FETCH_ASSOC);
 $categorias = $conexion->query("SELECT * FROM categorias ORDER BY nombre ASC")->fetchAll(PDO::FETCH_ASSOC);
