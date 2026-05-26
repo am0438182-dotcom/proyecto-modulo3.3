@@ -147,6 +147,38 @@ textarea:focus-visible {
     outline-offset: 2px;
 }
 
+/* Barra superior */
+.header{
+    width: 100%;
+    padding: 10px 20px;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenedor del logo */
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo redondeado */
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Hace el logo circular */
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+/* Nombre de la empresa */
+.nombre-empresa{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
 header {
     background: rgba(8, 17, 36, 0.95);
     color: #ffffff;

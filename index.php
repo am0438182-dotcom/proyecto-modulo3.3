@@ -15,6 +15,12 @@ if (isset($_SESSION['usuario'])) {
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <header class="header">
+    <div class="logo-container">
+        <img src="img/logo.png" alt="Logo Empresa" class="logo">
+        <h2 class="nombre-empresa">Marketplace Express</h2>
+    </div>
+</header>
 
 <header>
     <h1>MarketPlace Express</h1>
