@@ -28,4 +28,4 @@
 
 10. Para acceder al sistema, usar las credenciales registradas o crear un nuevo usuario desde `registro.php`.
 
-Nota: si se usa VS Code agregar las extensiones PHP Intelephense y PHP Server, si conoces cómo puedes consultar este video "https://www.youtube.com/watch?v=DSDrKE4XIMk".
+Nota: si se usa VS Code agregar las extensiones PHP Intelephense y PHP Server, si conoces cómo puedes consultar este video "https://www.youtube.com/watch?v=WYsgnOal_u0".
