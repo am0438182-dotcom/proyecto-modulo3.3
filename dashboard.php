@@ -50,19 +50,22 @@ include 'layout/navbar.php';
     </div>
 
     <div class="dashboard">
-        <div class="box">
+        <div class="box box-figura box-clientes">
+            <div class="box-figura-icon" aria-hidden="true">👥</div>
             <h2><?php echo $clientes; ?></h2>
             <p>Clientes registrados</p>
             <a class="btn" href="clientes/listar.php">Ver clientes</a>
         </div>
 
-        <div class="box">
+        <div class="box box-figura box-productos">
+            <div class="box-figura-icon" aria-hidden="true">📦</div>
             <h2><?php echo $productos; ?></h2>
             <p>Productos disponibles</p>
             <a class="btn" href="productos/listar.php">Ver productos</a>
         </div>
 
-        <div class="box">
+        <div class="box box-figura box-ventas">
+            <div class="box-figura-icon" aria-hidden="true">🧾</div>
             <h2><?php echo $ventas; ?></h2>
             <p>Ventas registradas</p>
             <a class="btn" href="ventas/listar.php">Ver ventas</a>
@@ -72,3 +75,4 @@ include 'layout/navbar.php';
 
 </body>
 </html>
+
