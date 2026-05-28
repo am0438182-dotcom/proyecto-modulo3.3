@@ -64,6 +64,18 @@ foreach ($ventas as $row) {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+<?php
+$navLinks = [
+    'dashboard' => '../dashboard.php',
+    'clientes' => '../clientes/listar.php',
+    'productos' => '../productos/listar.php',
+    'ventas' => '../ventas/nueva_venta.php',
+    'reportes' => 'reportes.php',
+    'usuarios' => '../empleados/listar.php',
+    'logout' => '../logout.php',
+];
+include '../layout/navbar.php';
+?>
 <main class="section">
     <div class="page-header">
         <div>

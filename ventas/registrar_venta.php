@@ -117,4 +117,4 @@ try {
     header('Location: nueva_venta.php?error=registro');
     exit;
 }
-?>
+

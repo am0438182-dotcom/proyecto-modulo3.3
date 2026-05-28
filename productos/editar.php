@@ -38,6 +38,18 @@ if($_POST){
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
+<?php
+$navLinks = [
+    'dashboard' => '../dashboard.php',
+    'clientes' => '../clientes/listar.php',
+    'productos' => 'listar.php',
+    'ventas' => '../ventas/nueva_venta.php',
+    'reportes' => '../reportes/reportes.php',
+    'usuarios' => '../empleados/listar.php',
+    'logout' => '../logout.php',
+];
+include '../layout/navbar.php';
+?>
 <main class="section">
     <div class="page-header">
         <div>

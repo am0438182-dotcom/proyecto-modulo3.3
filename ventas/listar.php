@@ -19,16 +19,18 @@ $detalleStmt = $conexion->prepare(
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-<header>
-    <h1>MarketPlace Express</h1>
-    <nav>
-        <a href="../dashboard.php">Dashboard</a>
-        <a href="../clientes/listar.php">Clientes</a>
-        <a href="../productos/listar.php">Productos</a>
-        <a href="nueva_venta.php">Nueva Venta</a>
-        <a href="../logout.php">Cerrar sesión</a>
-    </nav>
-</header>
+<?php
+$navLinks = [
+    'dashboard' => '../dashboard.php',
+    'clientes' => '../clientes/listar.php',
+    'productos' => '../productos/listar.php',
+    'ventas' => 'listar.php',
+    'reportes' => '../reportes/reportes.php',
+    'usuarios' => '../empleados/listar.php',
+    'logout' => '../logout.php',
+];
+include '../layout/navbar.php';
+?>
 <main class="section">
     <div class="page-header">
         <div>

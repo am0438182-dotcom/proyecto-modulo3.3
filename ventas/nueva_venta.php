@@ -18,24 +18,28 @@ $success = isset($_GET['success']);
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-<header>
-    <h1>MarketPlace Express</h1>
-    <nav>
-        <a href="../dashboard.php">Dashboard</a>
-        <a href="../clientes/listar.php">Clientes</a>
-        <a href="../productos/listar.php">Productos</a>
-        <a href="nueva_venta.php">Nueva Venta</a>
-        <a href="../logout.php">Cerrar sesión</a>
-    </nav>
-</header>
+<?php
+$navLinks = [
+    'dashboard' => '../dashboard.php',
+    'clientes' => '../clientes/listar.php',
+    'productos' => '../productos/listar.php',
+    'ventas' => 'nueva_venta.php',
+    'reportes' => '../reportes/reportes.php',
+    'usuarios' => '../empleados/listar.php',
+    'logout' => '../logout.php',
+];
+include '../layout/navbar.php';
+?>
 <main class="section">
     <div class="page-header">
         <div>
             <h1>Registrar Nueva Venta</h1>
             <p class="subtitle">Selecciona cliente y producto para crear la venta.</p>
         </div>
-        <button type="button" class="btn back-button" onclick="history.back()">Volver</button>
+<button type="button" class="btn back-button" onclick="history.back()">Volver</button>
     </div>
+
+
 
     <?php if ($error): ?>
         <p class="alert alert-error"><?= htmlspecialchars($error) ?></p>
